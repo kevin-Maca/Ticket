@@ -11,11 +11,13 @@ public:
     int trenesDisponibles;
     int puntos;
 
-    Jugador();
+   
+    Jugador(int trenesIniciales);
 
     void agregarCarta(Carta c);
+  
     bool puedeTomarTrayecto(const Trayecto& t);
-    void usarCartas(Color c, int cantidad);
+    std::vector<Carta> usarCartas(Color c, int cantidad); 
 };
 
 #endif
