@@ -100,14 +100,14 @@ void jugar() {
         {"Q", "S", 4, AMARILLO, 0,0}
     };
 
-    int turnoActual = 0; // Índice del jugador actual
+    int turnoActual = 0; // Íindice del jugador actual
     bool juegoEnCurso = true;
 
     while (juegoEnCurso) {
         Jugador& jugadorActual = jugadores[turnoActual]; // Referencia al jugador del turno
 
         std::cout << "\n--- Estado del Tablero ---\n";
-        juegoTablero.mostrarTablero(); // Aquí se llama a la función de Tablero
+        juegoTablero.mostrarTablero(); // Aquí  llamamos a la función de Tablero
         std::cout << "--------------------------\n";
 
         std::cout << "\n--- Turno del Jugador " << (turnoActual + 1) << " ---\n";
@@ -148,7 +148,7 @@ void jugar() {
                     } else {
                         std::cout << "Índice de zona visible inválido o ranura vacía. Intenta de nuevo.\n";
                     }
-                } else if (idx == 5) { // De la baraja (ciego)
+                } else if (idx == 5) { // De la baraja (Ciego)
                     Carta robada = robarCarta();
                     if (robada.color != COLOR_NULO) {
                         jugadorActual.agregarCarta(robada);
